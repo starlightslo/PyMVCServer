@@ -1,6 +1,7 @@
 __author__ = 'Tony'
 
 class Controller(object):
+    # Request
     method = None
     path = None
     headers = {}
@@ -8,3 +9,8 @@ class Controller(object):
     action = None
     args = []
     body = None
+
+    # Response
+    response = {
+        'headers': {}
+    }

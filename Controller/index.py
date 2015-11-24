@@ -4,7 +4,7 @@ import PyMVCController
 
 class index(PyMVCController.Controller):
     def index(self):
-        self.headers['Content-type'] = 'text/html'
+        self.response['headers']['Content-type'] = 'text/html'
         return '<center><h1>Hello PyMVCServer</h1></center>'
 
     def add(self):

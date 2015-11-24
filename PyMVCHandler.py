@@ -65,6 +65,7 @@ class Handler(BaseHTTPRequestHandler):
 
                 # Set information
                 headers['Content-type'] = 'text/plain'
+                myControlelr.headers = self.headers
                 myControlelr.models = self.MODELS
                 myControlelr.method = method
                 myControlelr.path = self.path
@@ -73,7 +74,7 @@ class Handler(BaseHTTPRequestHandler):
                 myControlelr.args = args
                 myControlelr.body = body
                 data = action()
-                addHeaders = myControlelr.headers
+                addHeaders = myControlelr.response['headers']
                 for key in addHeaders:
                     headers[key] = addHeaders[key]
 
